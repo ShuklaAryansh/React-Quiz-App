@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 
 export const Timer = ({SetIsOver}) => {
-    const [time,setTime] = useState(10);
+    const [time,setTime] = useState(15);
     const [displayTime,setdisplayTime] = useState('');
     
     
