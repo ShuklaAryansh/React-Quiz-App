@@ -1,77 +1,9 @@
-// import React, { useState } from 'react'
-// import { que } from './que.js'
-
-// export const Questions = ( { score, SetSecore, SetIsOver}) => {
-    
-//     const [QueIdx, updateQueIdx] = useState(0);
-    
-    
-//     const size = que.length;
-//     const currentQuestion = que[QueIdx];
-      
-    
-//     const handleOptionClick = (selectedOption) => {
-    
-//         if(currentQuestion.Answer === selectedOption){
-    
-//             SetSecore(prevScore => prevScore + 1);
-//         }
-
-    
-//         if(QueIdx < (size - 1) ){
-    
-//             updateQueIdx(prevIdx => prevIdx + 1);
-//         } else {
-    
-//             SetIsOver(true);
-//         }
-//     }
-      
-//     return (    
-//         <>
-//             <div className='flex flex-col text-center gap-6 w-full'>
-            
-//                 {}
-//                 <div className='text-lg font-medium text-blue-400'>
-//                     Question {QueIdx + 1} of {size}
-//                 </div>
-            
-//                 {}
-//                 <div className='text-2xl font-bold text-white mb-6'>{currentQuestion.Q }</div>
-            
-//                 {}
-//                 <div className='flex flex-col gap-4'>
-//                     {currentQuestion.Options.map((Option , index)=>{ 
-//                         return (
-//                             <button 
-//                                 key={index}
-                 
-//                                 className='p-4 bg-cyan-600 text-white text-xl font-semibold rounded-lg shadow-lg transition duration-200 ease-in-out 
-//                                            hover:bg-cyan-500 hover:shadow-cyan-500/50 hover:scale-[1.02]
-//                                            active:bg-cyan-700 focus:outline-none focus:ring-4 focus:ring-cyan-500/50'
-//                                 onClick={() => handleOptionClick(Option)} 
-//                             >
-//                                 {Option}
-//                             </button>
-//                         )
-//                     })}
-//                 </div>
-              
-//                 {}
-//                 <div className='text-xl font-semibold text-gray-400 mt-6'>
-//                     Score: <span className='text-teal-400'>{score}</span>
-//                 </div>
-            
-//             </div>
-//         </>
-//     )
-// }
 
 import React, { useState, useEffect } from 'react'; // 1. Import useEffect
 import axios from 'axios'; // 2. Import axios (you must install it: npm install axios)
 
 // Assuming your API endpoint looks something like this:
-const API_URL = 'https://69330c96e5a9e342d271beff.mockapi.io/Questions';
+const API_URL = 'Put Your own question api';
 
 export const Questions = ({ score, SetSecore, SetIsOver }) => {
 
@@ -89,7 +21,7 @@ export const Questions = ({ score, SetSecore, SetIsOver }) => {
             try {
                 //just adding one new question for testiong purpose
                 // const addup = await axios({
-                //     url: 'https://69330c96e5a9e342d271beff.mockapi.io/Questions',
+                //     url: 'put your own question api url',
                 //     method:'post',
                 //     data:{
                 //         Q:'Tell Me Your Name',
